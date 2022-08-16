@@ -1,5 +1,7 @@
 import { config } from "https://deno.land/std@0.152.0/dotenv/mod.ts";
-const { DATA_API_KEY, APP_ID } = await config();
+// const { DATA_API_KEY, APP_ID } = await config();
+const DATA_API_KEY = Deno.env.get("DATA_API_KEY");
+const APP_ID = Deno.env.get("APP_ID");
 const BASE_URI = `https://data.mongodb-api.com/app/${APP_ID}/endpoint/data/v1/action`;
 const DATA_SOURCE = "Wordle";
 const DATABASE = "wordle_db";
